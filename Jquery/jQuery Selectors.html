@@ -1,0 +1,82 @@
+<!-- element,attribute, using "this"-->
+<html>
+<head> 
+	<title> 
+	jQuery Selectors
+	</title> 
+	
+	<style type="text/css">
+	#circle{ 
+				height:150px;
+				width:150px;
+				border-radius:50%;
+				background-color:green;
+				margin:10px;
+			}
+	.firstsquare{ 
+				height:150px;
+				width:150px;
+				background-color:red;
+				margin:10px;
+			}
+	.secondsquare{ 
+				height:150px;
+				width:150px;
+				background-color:blue;
+				margin:10px;
+			}
+			
+	
+	
+	</style>
+	<!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script><!-- microsoft link -->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery-3.4.0/jquery.min.js"></script><!-- google link -->
+	
+	<script src="C:\Users\Mostakim Mullick\Desktop\Codes folder\web page\Jquery\jquery.min.js"> </script>
+	
+</head>
+<body>
+	<div id="circle"></div>
+	<div class="firstsquare"></div>
+	<div class="secondsquare"></div>
+	<p> HEY THERE!</p>
+	<iframe src="https://www.google.com"></iframe>
+	
+	
+	<script type="text/javascript">
+	 $("#circle").click(function(){
+					alert("CIRCLE HAS BEEN SELECTED");
+					});
+	 $(".firstsquare").click(function(){
+					alert("SQUARE HAS BEEN SELECTED");
+					});
+	 $("div").click(function(){
+					alert("DIV HAS BEEN SELECTED");
+					});
+	 $("p").click(function(){
+					alert("PARAGRAPH HAS BEEN SELECTED");
+					});
+	 $("#circle").hover(function(){
+					$("iframe").attr("src","https://www.facebook.com");
+					});
+	 $(".secondsquare").click(function(){
+					$(".secondsquare").css("width","300px");
+					});
+	$("#circle").click(function(){
+					$("#circle").css("background-color","orange");
+					});
+	$("body").click(function(){
+					alert($("body").css("width"));
+					});
+	$("div").click(function(){
+					alert("You clicked on a " +$(this).attr("id"));
+					});
+	</script>
+
+
+
+
+
+
+</body>
+</html>

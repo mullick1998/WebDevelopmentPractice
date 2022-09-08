@@ -1,0 +1,52 @@
+<html>
+<head> 
+	<title> 
+	WEB DESIGNING 
+	</title> 
+	
+	<style type="text/css">
+	
+	
+	
+	</style>
+	
+</head>
+<body>
+	<p id="paragraph1"> CAN YOU GUESS THE NUMBER OF FINGER I'M HOLDING RIGHT NOW? </p>
+	<select id="number">
+		<option selected>0</option>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+		
+	<button id="button1"> GUESS NOW </button1>
+	<script type="text/javascript">
+	
+
+		document.getElementById("button1").onclick = function(){
+										var mynum = document.getElementById("number").value;
+										var gotit = false;
+										var guessit = 1;
+										
+										while(gotit == false)
+										  { var x = Math.floor((Math.random() * 5) + 1);
+												if (x == mynum)
+													{ 	gotit== true;
+														alert("BRAVO! I guessed Correctly. It was "+ mynum + ". It took me " + guessit +" guesses.");}
+										 else
+											{ guessit++;}
+										  }
+										  exit;
+										}
+	</script>
+
+
+
+
+
+
+</body>
+</html>

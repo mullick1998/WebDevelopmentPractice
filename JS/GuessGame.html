@@ -1,0 +1,38 @@
+
+<html>
+<head> 
+	<title> 
+	WEB DESIGNING 
+	</title> 
+	
+	<style type="text/css">
+	
+	
+	
+	</style>
+	
+</head>
+<body>
+	<p id="paragraph1"> CAN YOU GUESS THE CORRECT NUMBER? (1-10) </p>
+	<input type="text" id="codeword">
+	<button id="button1"> GUESS </button1>
+	<script type="text/javascript">
+	
+
+		document.getElementById("button1").onclick = function(){
+										var x = Math.floor((Math.random() * 10) + 1);
+										 var a = x;
+										  if (document.getElementById("codeword").value == a)
+											{alert("BRAVO! You guessed Correctly");}
+										 else
+											{alert("HARD LUCK! Try Again. The Number is " +a);}
+										}
+	</script>
+
+
+
+
+
+
+</body>
+</html>

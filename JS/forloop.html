@@ -1,0 +1,41 @@
+
+<html>
+<head> 
+	<title> 
+	WEB DESIGNING 
+	</title> 
+	
+	<style type="text/css">
+	
+	
+	
+	</style>
+	
+</head>
+<body>
+	<p id="paragraph1"> Which Table you want to print? </p>
+	<input type="text" id="field">
+	<button id="button1"> PRINT </button>
+	<p id="paragraph2"> </p>
+	<div id="tableID"></div>
+	<script type="text/javascript">
+	  document.getElementById("button1").onclick = function(){
+										var x = document.getElementById("field").value;
+										var z ="";
+										for( var a=1; a<=10; a++)
+										{
+										var y = a*x;
+										var z = z+"<p>"+x+"&nbsp"+"*"+"&nbsp"+ a+"&nbsp"+ "="+"&nbsp"+ y+"</p>";
+										}
+										document.getElementById("tableID").innerHTML=z;
+									}
+	
+	</script>
+
+
+
+
+
+
+</body>
+</html>

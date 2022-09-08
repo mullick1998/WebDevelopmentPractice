@@ -1,0 +1,139 @@
+
+
+<html>
+<head> 
+	<title> 
+	Jquery User interface
+	</title> 
+	<link href="C:\Users\Mostakim Mullick\Desktop\Codes folder\web page\Jquery\jquery-ui-folder\jquery-ui.css" rel="stylesheet">
+	<script type="text/javascript" src="C:\Users\Mostakim Mullick\Desktop\Codes folder\web page\Jquery\jquery.min.js"> </script>
+	<script  src="C:\Users\Mostakim Mullick\Desktop\Codes folder\web page\Jquery\jquery-ui-folder\jquery-ui.js"></script>
+	
+	
+	<style type="text/css">
+	#circle1{
+				width:150px;
+				height:150px;
+				background-color:green;
+				border-radius:50%;
+				border: 1px solid black;
+				float:right;
+			}
+	#circle2{
+				width:150px;
+				height:150px;
+				background-color:orange;
+				border-radius:50%;
+				border: 1px solid black;
+				float:right;
+			}
+	#circle3{
+				width:150px;
+				height:150px;
+				background-color:red;
+				border-radius:50%;
+				border: 1px solid black;
+				float:right;
+			}
+	#circle4{
+				width:150px;
+				height:150px;
+				background-color:blue;
+				border-radius:50%;
+				border: 1px solid black;
+				float:right;
+			}
+	#wrapper{
+				width:1000px;
+				height:600px;
+				background-color:yellow;
+				border: 1px solid black;
+			}
+	#red, #green, #blue {
+				float: left;
+				clear: left;
+				width: 300px;
+				margin: 15px;
+			}
+  #swatch {
+				width: 120px;
+				height: 100px;
+				margin-top: 18px;
+				margin-left: 350px;
+				background-image: none;
+			}
+  #red .ui-slider-range { background: #ef2929; }
+  #red .ui-slider-handle { border-color: #ef2929; }
+  #green .ui-slider-range { background: #8ae234; }
+  #green .ui-slider-handle { border-color: #8ae234; }
+  #blue .ui-slider-range { background: #729fcf; }
+  #blue .ui-slider-handle { border-color: #729fcf; }
+	</style>
+	
+	
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div id="red"></div>
+		<div id="green"></div>
+		<div id="blue"></div>
+		<div id="circle1"></div>
+		<div id="circle2"></div>
+		<div id="circle3"></div>
+		<div id="circle4"></div>
+	</div>
+	
+	<script type="text/javascript">
+		$("#circle1").draggable({containment:"#wrapper",scroll:false});
+		$("#circle2").draggable({containment:"#wrapper",scroll:false});
+		$("#circle3").draggable({containment:"#wrapper",scroll:false});
+		$("#circle4").draggable({containment:"#wrapper",scroll:false});
+		$("#wrapper").resizable();
+		$("#wrapper").slider();
+		
+		
+		$( function() {
+							function hexFromRGB(r, g, b) {
+															var hex = [
+																		r.toString( 16 ),
+																		g.toString( 16 ),
+																		b.toString( 16 )
+																	];
+															$.each( hex, function( nr, val ) {
+																								if ( val.length === 1 ) 
+																										{
+																											hex[ nr ] = "0" + val;
+																										}
+																							});
+															return hex.join( "" ).toUpperCase();
+														}
+							function refreshWrapper() {
+															var red = $( "#red" ).slider( "value" ),
+															green = $( "#green" ).slider( "value" ),
+															blue = $( "#blue" ).slider( "value" ),
+															hex = hexFromRGB( red, green, blue );
+															$( "#wrapper" ).css( "background-color", "#" + hex );
+													}
+ 
+														$( "#red, #green, #blue" ).slider({
+																							orientation: "horizontal",
+																							range: "min",
+																							max: 255,
+																							value: 127,
+																							slide: refreshWrapper,
+																							change: refreshWrapper
+																						});
+														$( "#red" ).slider( "value", 255 );
+														$( "#green" ).slider( "value", 140 );
+														$( "#blue" ).slider( "value", 60 );
+						} );
+	</script>
+
+
+
+
+
+
+</body>
+</html>

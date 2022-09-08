@@ -1,0 +1,58 @@
+
+<html>
+<head> 
+	<title> 
+	Variable and array
+	</title> 
+	
+	<style type="text/css">
+	
+	
+	
+	</style>
+	
+</head>
+<body>
+<p id="paragraph"> After Sum. </p>
+
+	<script type="text/javascript">
+		var x=5;
+		var y=10;
+		var z= x+y;
+		document.getElementById("paragraph").innerHTML=document.getElementById("paragraph").innerHTML+"&nbsp;"+"&nbsp;"+"&nbsp;"+"x and y is equal to"+"&nbsp;"+"&nbsp;"+"&nbsp;"+z;
+	
+	</script>
+
+
+<input type="text" id="sometext">
+<button id="button1"> Change the text </button>
+<p id="paragraph2"> This some text.</p>
+
+	<script type="text/javascript">
+		document.getElementById("button1").onclick= function(){
+			var a = "";
+			a = document.getElementById("sometext").value;
+			document.getElementById("paragraph2").innerHTML = a;
+				}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+<!--Array-->
+<p id="demo"></p>
+   <script type="text/javascript">
+		var cars = ["VOLVO", "SWIFT","TOYOTO"];
+		cars.push("AMAZE");
+		cars[4]="INDIGO";
+		
+		<!-- splice(position, to be deleted, to be added)-->
+		cars.splice(2,0,"INNOVA","DEZIRE");
+		document.getElementById("demo").innerHTML= cars;
+	</script>
+			
+</body>
+</html>

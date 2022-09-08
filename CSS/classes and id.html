@@ -1,0 +1,48 @@
+<!--RULES FOR CLASS: more than one CLASS can be use in a single page and with single element.-->
+<!--RULES FOR ID: ID can be use only once, though it will work but it is against validation and one ID with one element canshould be used.-->
+<!--Important: ID has more prefernce than class-->
+
+<html>
+<head> 
+	<title> 
+	CLASSES AND ID 
+	</title>
+	
+	<!--class start with dot "."-->
+	<!--ID start with dot "#"-->
+	<style type="text/css">
+	.redfont {
+				color:red;
+			}
+	.largefont {
+				font-size:54px;
+				}
+	
+	#firstID {
+				color:Blue;
+				font-size:100px;
+			}
+	#secID {
+				color:yellow;
+			}
+	</style>
+</head>
+<body>
+
+<p class="redfont"> This is for our first class</p>
+<p class="largefont redfont"> This is for our Second class</p>
+<h3> CHECK FONT COLOR </h3>
+<h2 class= "redfont"> CHECK FONT COLOR </h2>
+<p id="firstID"> This first paragraph is for ID </p>
+<p class="redfont"id="secID"> This second paragraph is for ID </p>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

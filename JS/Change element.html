@@ -1,0 +1,41 @@
+
+<html>
+<head> 
+	<title> 
+	Change Element 
+	</title> 
+	
+	<style>
+	
+
+	
+	</style>
+	
+</head>
+<body>
+	<p id="paragraph1"> Hey Guys, this is my PAGE. </p>
+	<button id="button1"> Append Text </button>
+	
+	
+	<p id="paragraph2"> Click on Button to change color. </p>
+	<button id="button2"> Change Color </button>
+	
+	
+	<script type="text/javascript">
+		document.getElementById("button1").onclick= function(){
+															document.getElementById("paragraph1").innerHTML=document.getElementById("paragraph1").innerHTML+"My name is Mustakim Mullick.";
+															}
+		document.getElementById("button2").onclick= function(){
+															document.getElementById("paragraph2").style.textDecoration="underline";
+															document.getElementById("paragraph2").style.color="red";
+															document.getElementById("paragraph2").style.fontSize="32px";
+															}
+	</script>
+
+
+
+
+
+
+</body>
+</html>

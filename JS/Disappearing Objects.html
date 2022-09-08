@@ -1,0 +1,52 @@
+
+<html>
+<head> 
+	<title> 
+	Disappearing Objects
+	</title> 
+	
+	<style type="text/css">
+	.circle {
+				width:130px;
+				height:130px;
+				border-radius:50%;
+				float:left;
+				margin-right:50px;
+			}
+	#redcircle{
+				background-color:red;
+			}
+	#greencircle{
+				background-color:green;
+			}
+	#bluecircle{
+				background-color:blue;
+			}
+	
+	</style>
+	
+</head>
+<body>
+
+	<div id="redcircle" class="circle"> </div>
+	<div id="greencircle" class="circle"> </div>
+	<div id="bluecircle" class="circle"> </div>
+
+	<script type="text/javascript" >
+		document.getElementById("redcircle").onclick= function(){
+								document.getElementById("redcircle").style.backgroundColor="yellow";}
+		document.getElementById("greencircle").onclick= function(){
+								document.getElementById("greencircle").style.display="none";}
+		document.getElementById("bluecircle").onclick= function(){
+								document.getElementById("bluecircle").style.borderRadius = "0%";}
+		 
+	
+	</script>
+
+
+
+
+
+
+</body>
+</html>
